@@ -1,0 +1,10 @@
+services:
+  api:
+    build: .
+    ports:
+      - "8001:8001"
+    volumes:
+      - ./data:/app/data
+    environment:
+      - AI_MODE=mock
+      - DATABASE_URL=sqlite:///./data/tasks.db
